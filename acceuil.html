@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Acceuil</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="acceuil.css">
+	</head>
+	<body>
+		<div id="contenaire">
+			<div id="formulaire_dessin">
+				<div class="menu">
+					<ul>
+						<li>
+							<a href="http://localhost:7777/">Acceuil</a>
+						</li>
+						<li>
+							<a href="http://localhost:7777/indexA">Methode ABC</a>
+						</li>
+						<li>
+							<a href="https://www.wikipedia.org/">Apropos</a>
+						</li>
+					</ul>
+				</div>
+				<div class="dessin_methodeABC">
+					<div class="methodeABC">
+						<h1>Methode ABC ou Loi de PARETO</h1>
+						<p> Loi  qui visualise des données en les classant par orde de Grandeur</p>
+					</div>
+					<div class="dessin">
+						<div id="cadre"></div>
+					</div>
+				</div>
+				<div class="inscription_button">
+					<form>
+						<div class="inscr_bt">
+							<div class="inp">
+								<input type="text" name="designation" id="inp" required placeholder="Designation des élements" />
+				    			<input type="text" name="valeurC" id="inp" required placeholder="Valeur du critére"/>
+			    			</div>
+			    			<div class="but">
+								<button type="button" id="but">Enregistrer</button>
+				    			<button type="button" id="but">fin enregegistrement</button>
+				    			<button type="button" id="but" disabled>pourcentage1</button>
+				    			<button type="button" id="but" disabled>ABC</button>
+			    			</div>
+		    			</div>
+					</form>
+				</div>
+			</div>
+			<footer>
+				<div id="footer">
+					<div id="regele">
+						<p>
+							<strong>NB :</strong> La Methode ABC ou la loi 20/80 est une methode qui gere le portefeuille 
+							de l'utilisateur <br><strong>Nous avons besoin de verifier l'echelle avant de commencer d'exploiter la methode</strong>
+						</p>
+					</div>
+					<div id="echelle">
+						<p>Zone A : <input type="text" name="zoneAx" id="zoneAx" value="20" required>%(X) des élements représentent<input type="text" name="zoneAy" id="zoneAy" value="80" required>%(Y) de la valeur totale du critère</p>
+						<p>Zone B : <input type="text" name="zoneBx" id="zoneBx" value="30" required>%(X) des élements représentent<input type="text" name="zoneBy" id="zoneBy" value="15" required>%(Y) de la valeur totale du critère</p>
+						<p>Zone C : <input type="text" name="zoneCx" id="zoneCx" value="50" required>%(X) des élements représentent<input type="text" name="zoneCy" id="zoneCy" value="5" required>%(Y) de la valeur totale du critère</p>
+					</div>
+				</div>
+		</footer>
+		</div>
+		<script type="text/javascript" src="acceuil.js"></script>
+	</body>
+</html>
