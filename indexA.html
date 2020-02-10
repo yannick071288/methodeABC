@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Methode ABC</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="chartjs.css">
+		<link rel="stylesheet" type="text/css" href="indexA.css">
+	</head>
+	<body>
+		<div id="contenaire">
+			<div id="formulaire_dessin">
+				<div class="menu">
+					<ul>
+						<li>
+							<a  href="http://localhost:7777/">Acceuil</a>
+						</li>
+						<li>
+							<a href="#footer">Echelle</a>
+						</li>
+						<li>
+							<a href="http://localhost:7777/nouvelle_partie">Nouvelle Partie</a>
+						</li>
+					</ul>
+				</div>
+				<div class="inscription_button">
+					<form>
+						<div class="inscr_bt">
+							<input type="text" name="designation" id="designation" required placeholder="Designation des élements" />
+			    			<input type="text" name="valeurC" id="valeurC" required placeholder="Valeur du critére"/>
+							<button type="button" id="enregistrer">Enregistrer</button>
+			    			<button type="button" id="enregistrerF">fin enregegistrement</button>
+			    			<button type="button" id="pourcentage1" disabled>pourcentage1</button>
+			    			<button type="button" id="abc" disabled>ABC</button>
+		    			</div>
+					</form>
+				</div>
+			</div>
+			<div id="tableau_representation">
+				<div id="table">
+					<table id="tableau" border="1"  >
+					    <thead>
+					        <tr>
+					            <th>Rang</th>
+					            <th>Désignation des élements</th>
+					            <th>% Element</th>
+					            <th>Valeur du critère</th>
+					            <th>Valeur cumulé du critère</th>
+					            <th>% De la Valeur cumulée du critère</th>
+					            <th>ABC</th>
+					        </tr>
+					        <% for(var i=0, c = infos.length; i<c; i++){
+								var row = infos[i]; 
+							%>
+							<tr>
+								<td><%= i+1 %></td>
+								<td><%= row.description %></td>
+								<td><%= row.valeur_X %></td>
+								<td><%= row.valeur %></td>
+								<td><%= row.valeurCC %></td>
+								<td><%= row.valeur_Y %></td>
+								<td><%= row.abc %></td>
+							</tr>
+							<% } %>
+					    </thead>
+					</table>
+				</div>
+			</div>
+		    <!--  <div class="canv">
+                <canvas id="myChart"></canvas>
+                 <canvas id="resultat_courbe">resultat</canvas>  Apres remettre ca 
+			</div> -->
+		</div>
+		<footer>
+			<div id="footer">
+				<div id="regele">
+					<p>
+						<strong>NB :</strong> La Methode ABC ou la loi 20/80 est une methode qui gere le portefeuille 
+						de l'utilisateur mais pour bien utiliser cet logiciel il faudra bien remplir la fenetre d'Echelle <strong>Nous avons besoin de verifier l'echelle avant de commencer d'exploiter la methode</strong>
+					</p>
+				</div>
+				<div id="echelle">
+					<p>Zone A : <input type="text" name="zoneAx" id="zoneAx" value="20" required>%(X) des élements représentent<input type="text" name="zoneAy" id="zoneAy" value="80" required>%(Y) de la valeur totale du critère</p>
+					<p>Zone B : <input type="text" name="zoneBx" id="zoneBx" value="30" required>%(X) des élements représentent<input type="text" name="zoneBy" id="zoneBy" value="15" required>%(Y) de la valeur totale du critère</p>
+					<p>Zone C : <input type="text" name="zoneCx" id="zoneCx" value="50" required>%(X) des élements représentent<input type="text" name="zoneCy" id="zoneCy" value="5" required>%(Y) de la valeur totale du critère</p>
+				</div>
+			</div>
+		</footer>
+		<script type="text/javascript" src="chartjs.js"></script>
+		<script type="text/javascript" src="indexA.js"></script>
+	</body>
+
+</html>
